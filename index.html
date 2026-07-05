@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animals Gallery</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+
+        }
+
+        body {
+
+            background: linear-gradient(90deg, rgb(255, 0, 0), rgba(255, 255, 0, 0.766), rgb(0, 174, 255));
+
+        }
+
+        .navbar {
+            height: 50px;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.186);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 2px solid rgba(255, 255, 255, 0.2);
+            border-radius: 0px 0px 16px 16px;
+            box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.544);
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .logoBox {
+            width: 260px;
+            height: 45px;
+            background-color: rgba(255, 255, 255, 0.055);
+            border-radius: 0px 16px 16px 16px;
+            border: 2px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.544);
+            display: flex;
+            justify-content: space-between;
+            gap: 5px;
+
+        }
+
+        .logoBox:hover {
+            color: white;
+            font-weight: 900;
+            border-bottom: 3px solid white;
+            border-radius: 16px;
+            box-shadow: -5px 5px 5px rgba(0, 0, 0, 0.544);
+        }
+
+        .logo {
+            height: 60px;
+            width: 60px;
+            background-size: cover;
+            background-image: url(Copilot_20260705_233416.png);
+            align-self: center;
+        }
+
+
+        .contact {
+            height: 45px;
+            width: 520px;
+            background-color: rgba(255, 255, 255, 0.053);
+            border: 2px solid rgba(255, 255, 255, 0.2);
+            border-radius: 16px 0px 16px 16px;
+            box-shadow: -5px 5px 5px rgba(0, 0, 0, 0.544);
+            display: flex;
+            justify-content: center;
+            align-items: center
+        }
+
+        .contact a {
+            text-decoration: none;
+            color: black;
+            margin-right: 12px;
+            padding: 8px;
+        }
+
+        .contact a:hover {
+            color: white;
+            font-weight: 900;
+            border-bottom: 3px solid white;
+            border-radius: 16px;
+            box-shadow: -5px 5px 5px rgba(0, 0, 0, 0.544);
+        }
+
+        .carousel {
+            margin: 1px auto;
+            height: 300px;
+            width: 100%;
+            border: 5px solid rgba(0, 0, 0, 0.021);
+            display: flex;
+            overflow-x: auto;
+            border-radius: 20px;
+            box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.544);
+            background-color: transparent;
+        }
+
+        .carousel::-webkit-scrollbar {
+            display: none;
+        }
+
+        .group {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1em;
+            animation: spin 5s infinite linear;
+            padding-right: 1em;
+        }
+
+        .row2 {
+            animation: spin 5s infinite linear;
+        }
+
+
+        .card {
+            /* flex: 0 0 5em; */
+            height: 280px;
+            width: 280px;
+            /* font-size: 35px; */
+            padding: 1px;
+            ;
+            background: linear-gradient(130deg, rgba(255, 255, 255, 0.216), rgba(255, 255, 255, 0.207));
+            border-radius: 20px;
+            border: 2px solid rgba(255, 255, 255, 0.2);
+            text-align: center;
+            align-content: center;
+            box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.544);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+        }
+
+        .card:hover {
+            border: 2px solid rgb(255, 255, 255);
+            box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.982);
+        }
+
+        @keyframes spin {
+            from {
+                translate: 0px;
+            }
+
+            to {
+                translate: -100%;
+            }
+        }
+
+        .image {
+            height: 275px;
+            width: 275px;
+            border-radius: 16px;
+            background-color: white;
+            background-size: cover;
+            image-resolution: inherit;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="navbar">
+        <div class="logoBox">
+            <div class="logo"></div>
+            <h2>Animals Gallery</h2>
+        </div>
+        <div class="contact">
+            <ul>
+                <a href="#About us"><i class="fa-solid fa-circle-info"></i></i>About Us</a>
+                <a href="#Download"><i class="fa-solid fa-download"></i>Download</a>
+                <a href="#Share"><i class="fa-solid fa-share"></i>Share</a>
+                <a href="#Contact"><i class="fa-solid fa-phone"></i>Contact</a>
+                <a href="#Menu" class="menu-index"><i class="fa-solid fa-bars"></i>Menu</a>
+            </ul>
+        </div>
+    </div>
+
+    <div class="carousel">
+        <div class="group">
+            <div class="card">
+                <div class="image"
+                    style="    background-image: url(https://plus.unsplash.com/premium_photo-1661895001905-d793f6f38943?w=1000&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OTN8fGFuaW1hbHN8ZW58MHx8MHx8fDA%3D)">
+                </div>
+            </div>
+            <div class="card">
+                <div class="image"
+                    style="    background-image: url(https://images.unsplash.com/photo-1602491453631-e2a5ad90a131?q=80&w=1227&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)">
+                </div>
+            </div>
+            <div class="card">
+                <div class="image"
+                    style="    background-image: url(https://images.unsplash.com/photo-1574870111867-089730e5a72b?q=80&w=987&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)">
+                </div>
+            </div>
+            <div class="card">
+                <div class="image"
+                    style="    background-image: url(https://images.unsplash.com/photo-1497752531616-c3afd9760a11?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)">
+                </div>
+            </div>
+            <div class="card">
+                <div class="image"
+                    style="    background-image: url(https://images.unsplash.com/photo-1564166174574-a9666f590437?q=80&w=987&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)">
+                </div>
+            </div>
+            <div class="card">
+                <div class="image"
+                    style="    background-image: url(https://plus.unsplash.com/premium_photo-1675715924047-a9cf6c539d9b?q=80&w=1171&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)">
+                </div>
+            </div>
+
+        </div>
+        <div aria-hidden class="group">
+            <div class="card">
+                <div class="image"
+                    style="    background-image: url(https://images.unsplash.com/photo-1534759846116-5799c33ce22a?q=80&w=1050&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)">
+                </div>
+            </div>
+            <div class="card">
+                <div class="image"
+                    style="    background-image: url(https://images.unsplash.com/photo-1521651201144-634f700b36ef?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)">
+                </div>
+            </div>
+            <div class="card">
+                <div class="image"
+                    style=" background-image: url(https://images.unsplash.com/photo-1438565434616-3ef039228b15?q=80&w=1173&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)">
+                </div>
+            </div>
+            <div class="card">
+                <div class="image"
+                    style="    background-image: url(https://images.unsplash.com/photo-1493916665398-143bdeabe500?q=80&w=1074&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)">
+                </div>
+            </div>
+            <div class="card">
+                <div class="image"
+                    style="    background-image: url(https://images.unsplash.com/photo-1459262838948-3e2de6c1ec80?q=80&w=1169&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)">
+                </div>
+            </div>
+            <div class="card">
+                <div class="image"
+                    style="    background-image: url(https://plus.unsplash.com/premium_photo-1666253246996-48ebd0922129?q=80&w=987&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)">
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="carousel ">
+        <div class="group row2">
+            <div class="card">
+                <div class="image"
+                    style="    background-image: url(https://images.unsplash.com/photo-1484406566174-9da000fda645?q=80&w=989&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)">
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="image"
+                    style="    background-image: url(https://images.unsplash.com/photo-1585110396000-c9ffd4e4b308?q=80&w=987&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)">
+                </div>
+            </div>
+            <div class="card">
+                <div class="image"
+                    style="    background-image: url(https://images.unsplash.com/photo-1535268647677-300dbf3d78d1?q=80&w=987&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)">
+                </div>
+            </div>
+            <div class="card">
+                <div class="image"
+                    style="    background-image: url(https://images.unsplash.com/photo-1564349683136-77e08dba1ef7?q=80&w=1172&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)">
+                </div>
+            </div>
+            <div class="card">
+                <div class="image"
+                    style="    background-image: url(https://plus.unsplash.com/premium_photo-1730233719882-890f7043eb9e?q=80&w=987&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)">
+                </div>
+            </div>
+            <div class="card">
+                <div class="image"
+                    style="    background-image: url(https://images.unsplash.com/photo-1589656966895-2f33e7653819?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)">
+                </div>
+            </div>
+        </div>
+        <div aria-hidden class="group row2">
+            <div class="card">
+                <div class="image"
+                    style="    background-image: url(https://images.unsplash.com/photo-1591824438708-ce405f36ba3d?q=80&w=987&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)">
+                </div>
+            </div>
+            <div class="card">
+                <div class="image"
+                    style="    background-image: url(https://images.unsplash.com/photo-1474511320723-9a56873867b5?q=80&w=1172&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)">
+                </div>
+            </div>
+            <div class="card">
+                <div class="image"
+                    style="    background-image: url(https://images.unsplash.com/photo-1777863073932-a4b8b68732fd?q=80&w=987&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)">
+                </div>
+            </div>
+            <div class="card">
+                <div class="image"
+                    style="    background-image: url(https://images.unsplash.com/photo-1780599186723-0a291ed2fe6a?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)">
+                </div>
+            </div>
+            <div class="card">
+                <div class="image"
+                    style="    background-image: url(https://images.unsplash.com/photo-1782679495300-db92bb1027a8?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)">
+                </div>
+            </div>
+            <div class="card">
+                <div class="image"
+                    style="    background-image: url(https://images.unsplash.com/photo-1782312509799-f48e24cfa8b0?w=1000&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDJ8NnNNVmpUTFNrZVF8fGVufDB8fHx8fA%3D%3D);">
+                </div>
+            </div>
+        </div>
+    </div>
+<div class="menu"></div>
+</body>
+
+</html>
